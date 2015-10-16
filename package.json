@@ -1,0 +1,15 @@
+{
+  "name": "seps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build-css": "node-sass --include-path sass/partials sass/app.sass public/css/app.css",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\""
+  },
+  "author": "Nataniel Blu Pedersen",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.3.3"
+  }
+}
