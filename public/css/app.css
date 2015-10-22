@@ -75,37 +75,35 @@ nav {
     .card-pin input[type=submit]:hover {
       cursor: pointer; }
 
-.card-text h1 {
-  margin-top: 0; }
-
-.card-text p {
-  margin-bottom: 40px;
-  font-family: Roboto-Regular;
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.87);
-  line-height: 24px; }
-
-.card-text button {
-  background-color: #1876D2;
-  border-radius: 2px;
-  box-shadow: 0px 0px 0px 2px #9fb4f2;
-  border: 0;
-  padding: 10px 17px;
-  font-family: Roboto-Medium;
-  font-size: 14px;
-  color: #FFFFFF;
-  letter-spacing: 0.5px;
-  line-height: 16px; }
-  .card-text button:hover {
-    background-color: #005DB9;
-    cursor: pointer; }
-
-.card-text span {
-  margin: 0 10px; }
-
-.card-text .user-action {
-  text-align: right;
-  margin: 0; }
+.card-text {
+  overflow: hidden; }
+  .card-text h1 {
+    margin-top: 0; }
+  .card-text p {
+    margin-bottom: 40px;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 24px; }
+  .card-text button {
+    background-color: #1876D2;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+    border: 0;
+    padding: 10px 17px;
+    font-family: Roboto-Medium;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    line-height: 16px; }
+    .card-text button:hover {
+      background-color: #005DB9;
+      cursor: pointer; }
+  .card-text span {
+    margin: 0 10px; }
+  .card-text .user-action {
+    text-align: right;
+    margin: 0; }
 
 .list {
   list-style-type: none;
@@ -134,6 +132,10 @@ nav {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
+
+.btn-right {
+  float: right;
+  margin-top: 20px; }
 
 .btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled {
   background-color: #DFDFDF !important;
@@ -256,6 +258,20 @@ button.btn-floating {
   border: 1px solid #DBDBDB;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
   border-radius: 2px; }
+
+.answers input[type="radio"] {
+  display: none; }
+
+.answers label {
+  display: inline-block;
+  background-color: #DBDBDB;
+  padding: 7px 20px;
+  font-size: 18px;
+  border-radius: 2px; }
+
+.answers input[type="radio"]:checked + label {
+  background-color: #1976D2;
+  color: #fff; }
 
 * {
   box-sizing: border-box; }
