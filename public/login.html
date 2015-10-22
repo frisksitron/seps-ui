@@ -16,32 +16,27 @@
           <p class="catch-phrase">Super Educational Polling System</p>
         </div>
         <ul>
-          <li><a href="login.html">Logg inn</a></li>
+          <li><a href="logout.html">Logg ut</a></li>
         </ul>
       </div>
     </nav>
 
     <div id="main" class="container">
-      <div class="card card-first card-pin">
-        <h1>Skriv inn PIN</h1>
-        <input type="text" placeholder="PIN">
-        <input type="submit" value="GÅ VIDERE">
+      <div id="login" class="card card-first card-text">
+        <h1>Logg inn</h1>
+        <input class="text-input" id="email" type="text" placeholder="E-post">
+        <input class="text-input" id="password" type="text" placeholder="Passord">
+
+        <button class="btn" type="submit">Logg inn</button>
       </div>
 
-      <div class="card card-text">
-        <h1>Foreleser?</h1>
-        <p>
-          Hvis du vil ha lage en avstemning, meningsmåling eller pop quiz
-          er SEPS det beste verktøyet til jobben. Registrer deg i dag og
-          start veien til en bedre hverdag!
-        </p>
-        <span class="user-action">
-          <button>Registrer deg</button>
-          <span>eller</span>
-          <button>Logg inn</button>
-        </span>
-      </div>
+      <div id="register" class="card card-text">
+        <h1>Registrer deg</h1>
+        <input class="text-input" id="email" type="text" placeholder="E-post">
+        <input class="text-input" id="password" type="text" placeholder="Passord">
 
+        <button class="btn" type="submit">Registrer deg</button>
+      </div>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
