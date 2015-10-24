@@ -1,6 +1,6 @@
 .card
   padding: 30px
-  margin-bottom: 30px
+  margin:  0 25px 30px 25px
   background: #FAFAFA
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24)
   border-radius: 2px
@@ -19,6 +19,12 @@
   display: flex
   justify-content: space-between
 
+  @media (max-width: 680px)
+    flex-direction: column
+
+    input[type="submit"]
+      margin-top: 20px
+
   h1
     font-family: Roboto-Regular
     font-size: 24px
@@ -29,7 +35,7 @@
     background: #FAFAFA
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24)
     border-radius: 2px
-    padding: 0 17px
+    padding: 7px 17px
     opacity: 0.50
     font-size: 24px
     color: #000000
@@ -47,6 +53,7 @@
 
     &:hover
       cursor: pointer
+
 
 
 .card-text
