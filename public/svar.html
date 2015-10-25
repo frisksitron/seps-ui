@@ -23,21 +23,88 @@
 
     <div id="main" class="container">
       <div class="card card-first card-text">
-        <h1>1. Liker du RUP</h1>
         <form action="/" method="post">
           <div class="answers">
-            <input type="radio" id="radio1" name="radios" value="ja">
-            <label for="radio1">Ja</label>
+            <fieldset class="answer">
+              <h1>1. Liker du RUP?</h1>
+              <input type="radio" id="radio1" name="aId1" value="ja">
+              <label for="radio1">Ja</label>
 
-            <input type="radio" id="radio2" name="radios" value="nei">
-            <label for="radio2">Nei</label>
+              <input type="radio" id="radio2" name="aId1" value="nei">
+              <label for="radio2">Nei</label>
+
+              <div class="btn-group">
+                <button class="btn btn-right next" type="button">Neste</button>
+              </div>
+
+            </fieldset>
+            <fieldset class="answer">
+              <h1>2. Du liker RUP</h1>
+              <input type="radio" id="radio3" name="aId2" value="ja">
+              <label for="radio3">Ja</label>
+
+              <input type="radio" id="radio4" name="aId2" value="nei">
+              <label for="radio4">Nei</label>
+
+              <div class="btn-group">
+                <button class="btn btn-right next" type="button">Neste</button>
+                <button class="btn btn-right previous" type="button">Forrige</button>
+              </div>
+
+            </fieldset>
+            <fieldset class="answer">
+              <h1>3. Helt klart fan</h1>
+              <input type="radio" id="radio5" name="aId3" value="ja">
+              <label for="radio5">Ja</label>
+
+              <input type="radio" id="radio6" name="aId3" value="nei">
+              <label for="radio6">Nei</label>
+
+
+              <div class="btn-group">
+                <button class="btn btn-right" type="submit">Send inn</button>
+                <button class="btn btn-right previous" type="button">Forrige</button>
+              </div>
+
+            </fieldset>
           </div>
 
-          <button class="btn btn-right" type="submit">Neste</button>
         </form>
       </div>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+      var current_fs, next_fs, previous_fs;
+      var left, opacity, scale;
+      var animating;
+
+      $('.next').click(function() {
+        if (animating) return false;
+        animating = true;
+
+        //this er kanppen og parent er da fieldsettet
+        current_fs = $(this).parent().parent();
+        next_fs = $(this).parent().parent().next();
+
+        next_fs.show();
+        current_fs.hide();
+        animating = false;
+      });
+
+      $('.previous').click(function() {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent().parent();
+        previous_fs = $(this).parent().parent().prev();
+
+        previous_fs.show();
+        current_fs.hide();
+
+        animating = false;
+      });
+
+    </script>
   </body>
 </html>

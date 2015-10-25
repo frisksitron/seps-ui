@@ -49,39 +49,42 @@ nav {
 .card-first {
   margin-top: -50px; }
 
-.card-pin {
+.card-pin form {
   display: flex;
   justify-content: space-between; }
   @media (max-width: 680px) {
-    .card-pin {
+    .card-pin form {
       flex-direction: column; }
-      .card-pin input[type="submit"] {
+      .card-pin form input[type="submit"] {
         margin-top: 20px; } }
-  .card-pin h1 {
-    font-family: Roboto-Regular;
-    font-size: 24px;
-    color: #202020;
-    line-height: 24px; }
-  .card-pin input[type=text] {
-    background: #FAFAFA;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
-    border-radius: 2px;
-    padding: 7px 17px;
-    opacity: 0.50;
-    font-size: 24px;
-    color: #000000;
-    line-height: 28px; }
-  .card-pin input[type=submit] {
-    opacity: 0.5;
-    font-family: Roboto-Medium;
-    font-size: 14px;
-    color: #1976D2;
-    line-height: 16px;
-    border: 0;
-    line-height: 28px;
-    background-color: #FAFAFA; }
-    .card-pin input[type=submit]:hover {
-      cursor: pointer; }
+
+.card-pin h1 {
+  font-family: Roboto-Regular;
+  font-size: 24px;
+  color: #202020;
+  line-height: 24px; }
+
+.card-pin input[type=text] {
+  background: #FAFAFA;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  padding: 7px 17px;
+  opacity: 0.50;
+  font-size: 24px;
+  color: #000000;
+  line-height: 28px; }
+
+.card-pin input[type=submit] {
+  opacity: 0.5;
+  font-family: Roboto-Medium;
+  font-size: 14px;
+  color: #1976D2;
+  line-height: 16px;
+  border: 0;
+  line-height: 28px;
+  background-color: #FAFAFA; }
+  .card-pin input[type=submit]:hover {
+    cursor: pointer; }
 
 .card-text {
   overflow: hidden; }
@@ -149,6 +152,11 @@ nav {
 .btn-right {
   float: right;
   margin-top: 20px; }
+
+.btn-group .btn, .btn-group .btn-large {
+  margin-left: 15px; }
+  .btn-group .btn:last-child, .btn-group .btn-large:last-child {
+    margin-left: 0; }
 
 .btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled {
   background-color: #DFDFDF !important;
@@ -285,6 +293,25 @@ button.btn-floating {
 .answers input[type="radio"]:checked + label {
   background-color: #1976D2;
   color: #fff; }
+
+.answers .answer {
+  border: none; }
+  .answers .answer:not(:first-of-type) {
+    display: none; }
+
+#questions input[type="text"] {
+  background-color: #FAFAFA;
+  display: block;
+  width: calc(100% - 15px);
+  font-size: 16px;
+  padding: 7px 0;
+  margin: 0 15px 15px 15px;
+  border: none;
+  border-bottom: 1px solid #DBDBDB; }
+
+#questions input[type="text"].input-question {
+  margin-left: 0;
+  width: 100%; }
 
 * {
   box-sizing: border-box; }

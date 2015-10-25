@@ -24,3 +24,25 @@
   input[type="radio"]:checked + label
       background-color: $main-blue
       color: #fff
+
+  .answer
+    border: none
+
+    &:not(:first-of-type)
+      display: none
+
+#questions
+
+    input[type="text"]
+      background-color: #FAFAFA
+      display: block
+      width: calc(100% - 15px)
+      font-size: 16px
+      padding: 7px 0
+      margin: 0 15px 15px 15px
+      border: none
+      border-bottom: 1px solid #DBDBDB
+
+    input[type="text"].input-question
+      margin-left: 0
+      width: 100%
