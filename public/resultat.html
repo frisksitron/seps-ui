@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <nav class="row">
+      <div id="nav-container" class="col-xs-12">
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo">
+          </a>
+          <p class="catch-phrase">Super Educational Polling System</p>
+        </div>
+        <ul>
+          <li><a href="mine-polls.html">Mine polls</a></li>
+          <li><a href="login.html">Logg inn</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="main" class="container">
+      <div id="poll-results" class="card card-first card-text">
+        <h1>Dette er en test</h1>
+        <div class="result">
+          <h3>Liker du RUP?</h3>
+          <div class="graph">
+            <canvas id="myChart1" width="150" height="150"></canvas>
+            <ul>
+              <li class="color-orange">En to hav skjer her da når det er ett landt svar</li>
+              <li class="color-green">To</li>
+              <li class="color-pink">Tre</li>
+              <li class="color-blue">Fire</li>
+            </ul>
+          </div>
+        </div>
+        <div class="result">
+          <h3>Hva er RUP?</h3>
+          <div class="graph">
+            <canvas id="myChart2" width="150" height="150"></canvas>
+            <ul>
+              <li class="color-orange">En to hav skjer her da når det er ett landt svar</li>
+              <li class="color-green">To</li>
+              <li class="color-pink">Tre</li>
+              <li class="color-blue">Fire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script>
+
+      $(document).ready(function() {
+        var data1 = [
+            {
+                value: 300,
+                color: "#F7464A",
+                highlight: "#FF5A5E"
+            },
+            {
+                value: 50,
+                color: "#46BFBD",
+                highlight: "#5AD3D1"
+            },
+            {
+                value: 100,
+                color: "#FDB45C",
+                highlight: "#FFC870"
+            }
+        ]
+        var data2 = [
+            {
+                value: 300,
+                color:"#F7464A",
+                highlight: "#FF5A5E",
+                label: "Red"
+            },
+            {
+                value: 50,
+                color: "#46BFBD",
+                highlight: "#5AD3D1",
+                label: "Green"
+            },
+            {
+                value: 100,
+                color: "#FDB45C",
+                highlight: "#FFC870",
+                label: "Yellow"
+            }
+        ]
+
+        var ctx1 = document.getElementById("myChart1").getContext("2d");
+        var myPieChart1 = new Chart(ctx1).Pie(data1, {
+          animationEasing: "easeOutQuart",
+          tooltipTemplate: ""
+        });
+
+        var ctx2 = document.getElementById("myChart2").getContext("2d");
+        var myPieChart2 = new Chart(ctx2).Pie(data2, {
+          animationEasing: "easeOutQuart",
+          animationSteps: 50
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+table
+  width: 100%
+  border-collapse: collapse
+  line-height: 55px
+
+  tr
+    border-bottom: 1px solid #DBDBDB
+    margin-bottom: 10px
+
+    &:first-child
+      border-bottom: none
+      line-height: 25px
+
+    &:last-child
+      border-bottom: none
+
+    th:first-child, td:first-child
+      width: 20%
+      text-align: left
+
+    th:nth-child(2), td:nth-child(2)
+      width: 60%
+      text-align: left
+
+    th:last-child, td:last-child
+      width: 20%
+      text-align: left
+
+    th
+      font-size: 14px
+      font-weight: 300
+
+    td
+      font-size: 18px
+
+    &:hover
+
+      background-color: $main-blue
+      color: #fff

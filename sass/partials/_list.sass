@@ -9,17 +9,21 @@
     &:last-child
       border-bottom: none
 
-  a
-    text-decoration: none
-    color: #202020
+    a
+      text-decoration: none
+      color: #202020
+      padding: 15px
+      border-radius: 2px
+      display: block
 
-    padding: 15px
-    display: block
-    border-radius: 2px
+      &:hover
+        background-color: $main-blue
+        color: #fff
 
-    &:last-child
-      border-bottom: none
+        .pin
+          color: #fff
 
-    &:hover
-      background-color: $main-blue
-      color: #fff
+      .pin
+        margin-left: 0
+        margin-right: 15px
+        color: #4CAF50

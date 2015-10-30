@@ -1,0 +1,48 @@
+$color-orange: #CFD219
+$color-green: #19D27D
+$color-pink: #D219CC
+$color-blue: $main-blue
+
+
+#poll-results
+  .color-orange
+    background-color: $color-orange
+
+  .color-green
+    background-color: $color-green
+
+  .color-pink
+    background-color: $color-pink
+
+  .color-blue
+    background-color: $color-blue
+
+  .result
+    margin-bottom: 50px
+
+    &:last-child
+      margin-bottom: 0
+
+    .graph
+      display: flex
+
+      canvas
+        width: 150px
+        height: 150px
+
+      ul
+        list-style-type: none
+        padding: 0
+        margin: 0 0 0 25px
+
+        li
+          padding: 7px 10px
+          margin: 5px
+          color: #fff
+
+    @media (max-width: 580px)
+      .graph
+        flex-direction: column
+
+        ul
+          margin: 15px 0 0 0
